@@ -10,7 +10,7 @@ const store = new Vuex.Store({
               scheduled_e_time : 1555650000, //2019/04/19 14:00:00
               actual_s_time : null,
               actual_e_time : null,
-              description : "ŠJ”­‰ï‹c",
+              description : "é–‹ç™ºä¼šè­°",
               n_people: 2,
           },
           mail:null,
