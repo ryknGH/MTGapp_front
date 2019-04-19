@@ -13,6 +13,7 @@ const store = new Vuex.Store({
               actual_e_time : null,
               description : "ŠJ”­‰ï‹c",
           },
+          mail : null,
       },
       mutations : {
 
