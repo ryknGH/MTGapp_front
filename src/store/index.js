@@ -10,7 +10,7 @@ const store = new Vuex.Store({
             scheduled_e_time : 1555650000, //2019/04/19 14:00:00
             actual_s_time : null,
             actual_e_time : null,
-            description : "�J����c",
+            description : "ï¿½Jï¿½ï¿½ï¿½ï¿½c",
         },
     },
     mutations : {
