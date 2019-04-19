@@ -4,18 +4,19 @@ import Vue from 'vue'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-    state : {
-        meeting_info : {
-            scheduled_s_time : 1555646400, //2019/04/19 13:00:00
-            scheduled_e_time : 1555650000, //2019/04/19 14:00:00
-            actual_s_time : null,
-            actual_e_time : null,
-            description : "ï¿½Jï¿½ï¿½ï¿½ï¿½c",
-        },
-    },
-    mutations : {
+      state : {
+          meeting_info : {
+              scheduled_s_time : 1555646400, //2019/04/19 13:00:00
+              scheduled_e_time : 1555650000, //2019/04/19 14:00:00
+              actual_s_time : null,
+              actual_e_time : null,
+              description : "�J����c",
+              n_people: 2,
+          },
+          mail:null,
+      },
+      mutations : {
 
-    },
+      },
 })
-   
 export default store
