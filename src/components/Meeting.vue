@@ -3,15 +3,21 @@
     <v-layout
       text-xs-center
       wrap
+      column
     >
-    meeting
+      test  
     </v-layout>
   </v-container>
 </template>
 
 <script>
   export default {
-   
+    data(){
+
+    },
+    created(){
+      
+    },
   }
 </script>
 
