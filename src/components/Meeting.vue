@@ -1,5 +1,6 @@
 <template>
-  <v-container style="height:100%">
+<v-layout>
+  <v-container style="height:100%" v-if="reaching_time_dialog!=true && over_time_dialog!=true">
     <v-layout
       text-xs-center
       wrap
@@ -27,11 +28,47 @@
       <v-spacer></v-spacer>
     </v-layout>
   </v-container>
+
+  <v-container v-if="reaching_time_dialog==true" class="ma-0 pa-0"> 
+    <v-layout
+      text-xs-center
+      wrap
+      column
+    >
+    <v-card>
+     <v-img :src="reaching_img" style="max-width:none;padding:0;" height="100vh" width="100vw">
+       <v-layout row>
+          <v-spacer></v-spacer>
+          <v-btn icon outline flat large class="display-1" @click="finish();">
+              <v-icon>
+                close
+              </v-icon>
+          </v-btn>
+       </v-layout>
+     </v-img>
+    </v-card>
+    </v-layout>
+  </v-container>
+
+  <v-container style="height:100%" v-if="over_time_dialog==true"> 
+    <v-layout
+      text-xs-center
+      wrap
+      column
+      style="height:100%"
+    >
+     時間だよ
+      <v-btn color="info" large class="display-1" style="width:10%" @click="finish();">
+          END
+      </v-btn>
+    </v-layout>
+  </v-container>
+
+</v-layout>
 </template>
 
 <script>
 import { setInterval } from 'timers';
-import router from "../router";
   export default {
     data(){
       return{
@@ -42,7 +79,10 @@ import router from "../router";
         meeting_info: null,
         intervalID: null,
         date: null,
+        over_time_dialog:false,
+        reaching_time_dialog:true,
         fee_per_time: 1000,
+        reaching_img: require("../static/img/neko.jpg"),
       }
     },
     created(){
@@ -67,7 +107,7 @@ import router from "../router";
     methods:{
       finish(){
         clearInterval(this.intervalId);
-        router.push({path:"finish"});
+        this.$router.push({path:"finish"});
       }
     },
   }
